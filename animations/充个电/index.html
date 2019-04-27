@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            width: 500px;
+            height: 500px;
+            /* background: lightgreen; */
+            padding-bottom: 10px;
+            padding-top: 10px;
+            margin: 20px auto;
+            position: relative;
+        }
+        
+        section {
+            width: 200px;
+            height: 400px;
+            margin: 50px auto;
+            position: relative;
+            border: 1px solid;
+        }
+        
+        section:after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 10px;
+            width: 100%;
+            bottom: 0;
+            background: lawngreen;
+            animation: runs 5s linear 0s infinite;
+        }
+        
+        p {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            border-radius: 50%;
+            background: lawngreen;
+            top: 450px;
+            animation: run 5s linear 0s infinite;
+        }
+        
+        @keyframes run {
+            0% {
+                top: 480px;
+                left: 0;
+            }
+            25% {
+                top: 480px;
+                left: 480px;
+            }
+            50% {
+                top: 0;
+                left: 480px;
+            }
+            75% {
+                top: 0;
+                left: 0;
+            }
+            100% {
+                top: 480px;
+                left: 0;
+            }
+        }
+        
+        @keyframes runs {
+            0% {
+                height: 10px;
+            }
+            100% {
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <section></section>
+        <p></p>
+    </div>
+</body>
+
+</html>

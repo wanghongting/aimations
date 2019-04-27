@@ -1,0 +1,40 @@
+@import "./common.scss";
+
+body,html{
+	width:100%;
+	height:100%;
+}
+img{
+	display:block;
+}
+.wraper{
+	width:100%;
+	.ul-info{
+		width:100%;
+		height:auto;
+		@include display(flex);
+		padding:px2rem(8px) px2rem(15px) 0;
+		flex-wrap:wrap;
+		.list{
+			flex-shrink:0;
+			width:33.33%;
+			height:auto;
+			padding:0 px2rem(3px);
+			margin-top:px2rem(3px);
+			img{
+				width:100%;
+				height:px2rem(108px);
+			}
+		}
+		.list-add{
+			height:px2rem(108px);
+			background:url(../img/12.png) no-repeat 50%;
+			background-size:cotain;
+			@include display(flex,row,center center);
+			.addCode{
+				width:100%;
+				opacity:0;
+			}
+		}
+	}
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>动画慢慢加载进度条？</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-decetion" content="telephone=no,email=no,address=no">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		body,html{
+			width: 100%;
+			height: 100%;
+		}
+		.line-info{
+			width: 0px;
+			height: 5px;
+			background: pink;
+		}
+		.wraper{
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+		.wraper .head{
+			width: 100%;
+			height: 45px;
+			background: #ff0;
+		}
+		.wraper .scroll-info{
+			width: 100%;
+			height: 1200px;
+			background: lightgrey;
+		}
+		.wraper .returnTop{
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			background: rgba(255,255,255,.8);
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div class="line-info"></div>
+	<div class="wraper">
+		<div class="head"></div>
+		<div class="scroll-info"></div>
+		<div class="returnTop">👆</div>
+	</div>
+	<script>
+		let line = document.querySelector(".line-info"),
+			btn = document.querySelector(".btn");
+		let end = document.body.clientWidth || document.documentElement.clientWidth;
+		let infit =0;
+		let topR = document.querySelector(".returnTop"),
+			box = document.querySelector(".scroll-info"),
+			bBox = document.querySelector(".wraper");
+		console.log(box);
+		
+		topR.onclick=function(){
+			console.log(box.scrollTop);
+		}
+
+		function move(){
+			infit++;
+			if(infit<end){
+				requestAnimationFrame(move);
+			}else{
+				cancelAnimationFrame(move);
+			}
+			line.style.width = infit+"px";
+			
+		}
+		move();
+	</script>
+</body>
+</html>

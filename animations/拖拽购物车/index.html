@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拖拽至购物车效果</title>
+    <link rel="stylesheet" href="css/shopping.css">
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <script type="text/javascript" src="js/zepto.1.6.js"></script>
+    <!-- <script type="text/javascript" src="js/newDrop.js"></script> -->
+</head>
+<body>
+    <div class="wrapper">
+        <div class="product">
+            <div draggable="true">
+                <figure>
+                    <figcaption><img src="img/shirt1.gif" draggable="false"></figcaption>
+                    <h3>111</h3>
+                    <p>价格：$<b>23</b></p>
+                </figure>
+            </div>
+            <div draggable="true">
+                <figure>
+                    <figcaption><img src="img/shirt2.gif" draggable="false"></figcaption>
+                    <h3>222</h3>
+                    <p>价格：$<b>20</b></p>
+                </figure>
+            </div>
+            <div draggable="true">
+                <figure>
+                <figcaption><img src="img/shirt3.gif" draggable="false"></figcaption>
+                <h3>333</h3>
+                <p>价格：$<b>22</b></p>
+                </figure>
+            </div>
+            <div draggable="true">
+                <figure>
+                <figcaption><img src="img/shirt4.gif" draggable="false"></figcaption>
+                <h3>444</h3>
+                <p>价格：$<b>10</b></p>
+            </figure>
+            </div>
+            <div draggable="true">
+                <figure>
+                <figcaption><img src="img/shirt5.gif" draggable="false"></figcaption>
+                <h3>55555</h3>
+                <p>价格：$<b>12</b></p>
+            </figure>
+            </div>
+            <div draggable="true">
+                <figure>
+                <figcaption><img src="img/shirt6.gif" draggable="false"></figcaption>
+                <h3>666</h3>
+                <p>价格：$<b>11</b></p>
+            </figure>
+            </div>
+        </div>
+        <div class="car">
+            <h1>购物车</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>产品名</th>
+                        <th>数量</th>
+                        <th>单价</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>12</td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <p>合计：<span id="sum"></span></p>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/drag.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .view {
+            transform-style: preserve-3d;
+            perspective: 800px;
+            /* perspective-origin: 1800px */
+        }
+        
+        .tip {
+            width: 200px;
+            height: 200px;
+            background: lightgoldenrodyellow;
+            position: absolute;
+            border: 1px solid;
+            border-radius: 10px;
+            opacity: .5;
+        }
+        
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            /* perspective: 800px; */
+            position: relative;
+            animation: add 3s linear infinite;
+        }
+        
+        @keyframes add {
+            0% {
+                transform: rotateX(100%) rotateY(100%)
+            }
+            100% {
+                transform: rotateX(360deg) rotateY(360deg)
+            }
+        }
+        
+        .left {
+            transform: rotate(90deg) translateZ(100px)
+        }
+        
+        .right {
+            transform: rotateY(-90deg) translateZ(-100px)
+        }
+        
+        .font {
+            transform: translateZ(100px)
+        }
+        
+        .back {
+            transform: rotateX(180deg) translateZ(100px)
+        }
+        
+        .top {
+            transform: rotateX(-90deg) translateZ(100px)
+        }
+        
+        .bottom {
+            transform: rotateY(-90deg) translateZ(100px)
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="view"> -->
+    <div class="box">
+        <div class="tip left"></div>
+        <div class="tip right"></div>
+        <div class="tip font"></div>
+        <div class="tip back"></div>
+        <div class="tip top"></div>
+        <div class="tip bottom"></div>
+    </div>
+    <!-- </div> -->
+</body>
+
+</html>

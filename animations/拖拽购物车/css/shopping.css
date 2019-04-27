@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding:0;
+}
+table{
+    border-collapse: collapse;
+}
+.wrapper{
+    width:1000px;
+    height:600px;
+    background:#eee;
+    margin:0 auto;
+}
+.product{
+    width:800px;
+    height:600px;
+    float:left;
+}
+.product>div{
+    position:relative;
+    width:140px;
+    float:left;       
+    padding:10px;
+}
+.clone{
+    background:rgba(255,255,255,.3);
+    position: absolute;
+    left:10px;
+    top:10px;
+}
+.product figure{
+    width:100%;
+    text-align: center;
+}
+.product figcaption{
+    width:140px;
+    height:140px;
+    border:1px solid #333;
+}
+.product img{
+    width:100%;
+    height:100%;
+}
+.car{
+    width:180px;
+    height:600px;
+    float:left;
+    background:#333;
+    text-align: center;
+    color: #fff;
+    padding:10px;
+    font-size:12px;
+    font-weight: 100;
+}
+.car h1{
+    line-height:90px;
+}
+.car table{
+    width:100%;
+}
+.car thead{
+    background:#eee;
+    color:#000;
+}
+.car tr{
+    height:30px;
+}
+.car table,.car td,.car th{
+    border:1px solid #ccc;
+}
+.car p{
+    text-align: right;
+    margin-top:20px;
+}
